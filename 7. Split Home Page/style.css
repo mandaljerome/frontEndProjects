@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: white;
+    font-family: sans-serif;
+}
+
+a {
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 7%;
+    transform: translateX(-50%);
+    width: 170px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 15px 0;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+}
+
+.body-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #3f3f3f;
+}
+
+.container {
+    position: absolute;
+    
+}
+
+.container.left {
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: url('./images/intel.jpg') no-repeat center/cover;
+}
+
+
+
+.container.left::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    left: 0; 
+}
+
+.container.right::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    right: 0; 
+}
+
+.container.right {
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url('./images/ryzen.jpg') no-repeat center/cover;
+}
+
+.body-container.left-hover .container.left {
+    width: 70%;
+}
+
+.body-container.left-hover .container.right {
+    width: 30%;
+}
+
+.body-container.right-hover .container.left {
+    width: 30%;
+}
+
+.body-container.right-hover .container.right {
+    width: 70%;
+}
+
+
+
+
+.container.right, .container.left, .container.left::before, .container.right::before {
+    transition: all 0.5s ease-in;
+}

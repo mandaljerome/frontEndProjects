@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+:root {
+}
+
+body {
+   background-color: #222;
+   font-family: 'Lato';
+   height: 100vh;
+}
+
+.container {
+   margin: 0 auto;
+   background-color: white;
+   transform-origin: top left;
+   transform: rotate(0deg);
+   transition: transform 0.7s ease-in;
+}
+
+.container.show-navbar {
+   margin: 0 auto;
+   background-color: white;
+   transform-origin: top left;
+   transform: rotate(-15deg);
+}
+
+.container.show-navbar .circle-container {
+   transform: rotate(-70deg);
+   
+}
+
+
+.circle-container {
+   position: fixed;
+   top: -100px;
+   left: -100px;
+   transition: transform 0.8s ease-in;
+}
+
+.circle {
+   position: relative;
+   width: 200px;
+   height: 200px;
+   background-color: skyblue;
+   border-radius: 50%;
+}
+
+#open {
+   position: absolute;
+   bottom: 35px;
+   right: 45px;
+   background: transparent;
+   border: 0;
+   font-size: 2rem;
+   color: black;
+}
+
+#close {
+   position: absolute;
+   bottom: 40px;
+   left: 45px;
+   background: transparent;
+   border: 0;
+   font-size: 2rem;
+   color: black;
+}
+
+.content {
+   width: 70%;
+   margin: auto;
+   padding: 70px 0;
+}
+
+.content h2 {
+   font-size: 3rem;
+   font-weight: bold;
+}
+
+.content p {
+   font-size: 1.5em;
+   line-height: 2;
+   margin: 20px 0;
+}
+
+p.author {
+   margin: 0 0 20px 0;
+   font-size: 1.3em;
+   font-style: italic;
+   color: gray;
+}
+
+.content img {
+   width: 100%;
+}
+
+
+.navbar {
+   position: absolute;
+   bottom: 100px;
+   left: -260px;
+   transition: .7s ease-in;
+}
+
+.container.show-navbar ~ .navbar {
+   left: 60px;
+}
+
+.navbar ul {
+   list-style: none;
+}
+
+.navbar ul li {
+   font-size: 2rem;
+   margin: 40px 0;
+   color: white;
+
+}
+
