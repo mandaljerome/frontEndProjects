@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    background: linear-gradient(
+        to top,
+        rgba(9, 9, 121, 1) 0%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato';
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+
+    h3 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin: 10px 0 0 0;
+    }
+
+    .big-cup {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        background-color: #fff;
+        width: 140px;
+        height: 300px;
+        border-radius: 0 0 25px 25px;
+        border: 5px solid #44d3f6;
+        overflow: hidden;
+
+        .remained-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            transition: 0.6s ease-out;
+
+            .remained {
+                color: #44d3f6;
+                font-size: 1.5rem;
+                font-weight: bolder;
+            }
+
+            span {
+                color: #44d3f6;
+            }
+        }
+
+        .percentage {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            height: 0;
+            overflow: hidden;
+            background-color: #85e3f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.6s ease;
+        }
+    }
+
+    .smaller-cups {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 300px;
+        margin-top: 10px;
+
+        .small-cup {
+            width: 50px;
+            background-color: #fff;
+            height: 90px;
+            margin: 10px 10px;
+            border-radius: 0 0 10px 10px;
+            border: 3px solid #44d3f6;
+            color: #44d3f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .small-cup.full {
+            background-color: #85e3f9;
+            color: rgba(9, 9, 121, 1);
+        }
+    }
+}

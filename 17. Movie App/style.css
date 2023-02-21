@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161a42;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+body header {
+  background-color: #22264c;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 3rem;
+}
+body header .search {
+  background: #161a42;
+  padding: 1rem;
+  border: none;
+  border-radius: 100px;
+  color: #5a53fa;
+  font-family: inherit;
+  width: 350px;
+}
+body header .search:focus {
+  outline: none;
+  background-color: #5a53fa;
+  color: #161a42;
+}
+body header .search::-moz-placeholder {
+  color: #5a53fa;
+}
+body header .search::placeholder {
+  color: #5a53fa;
+}
+body .main {
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+body .main .card {
+  width: 18%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  background-color: #22264c;
+  color: #fff;
+  position: relative;
+  margin: 30px 10px;
+  min-width: 220px;
+}
+body .main .card img {
+  width: 100%;
+}
+body .main .card .info {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .main .card .info h3 {
+  margin: 0;
+}
+body .main .card .info span {
+  background-color: #161a42;
+  padding: 10px;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+body .main .card .info .green {
+  color: green;
+}
+body .main .card .info .orange {
+  color: orange;
+}
+body .main .card .info .red {
+  color: red;
+}
+body .main .card .overview {
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  height: 90%;
+  padding: 2rem;
+  transform: translateY(105%);
+  transition: transform 0.6s ease-in;
+  letter-spacing: 1px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  background-color: #22264c;
+}
+body .main .card:hover .overview {
+  transform: translateY(0);
+}/*# sourceMappingURL=style.css.map */

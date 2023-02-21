@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+$primary-color: #161a42;
+$secondary-color: #22264c;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-color;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+
+    header {
+        background-color: $secondary-color;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 3rem;
+
+        .search {
+            background: $primary-color;
+            padding: 1rem;
+            border: none;
+            border-radius: 100px;
+            color: #5a53fa;
+            font-family: inherit;
+            width: 350px;
+        }
+
+        .search:focus {
+            outline: none;
+            background-color: #5a53fa;
+            color: $primary-color;
+        }
+
+        .search::placeholder {
+            color: #5a53fa;
+        }
+    }
+
+    .main {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1600px;
+        margin: 0 auto;
+
+        .card {
+            width: 18%;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+            background-color: $secondary-color;
+            color: #fff;
+            position: relative;
+            margin: 30px 10px;
+            min-width: 220px;
+
+            img {
+                width: 100%;
+            }
+
+            .info {
+                padding: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                    margin: 0;
+                }
+
+                span {
+                    background-color: $primary-color;
+                    padding: 10px;
+                    font-weight: bolder;
+                    border-radius: 5px;
+                }
+
+                .green {
+                    color: green;
+                }
+
+                .orange {
+                    color: orange;
+                }
+
+                .red {
+                    color: red;
+                }
+            }
+
+            .overview {
+                position: absolute;
+                background-color: #fff;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                color: #fff;
+                height: 90%;
+                padding: 2rem;
+                transform: translateY(105%);
+                transition: transform 0.6s ease-in;
+                letter-spacing: 1px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.9;
+                background-color: $secondary-color;
+            }
+        }
+        .card:hover .overview {
+            transform: translateY(0);
+        }
+    }
+}
